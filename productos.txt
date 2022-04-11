@@ -1,0 +1,27 @@
+[
+        {
+        "id": "1",
+        "nombre": "Escuadra",
+        "precio": 150,
+        "url": " "
+        
+      },
+      {
+        "id": "2",
+        "nombre": "Calculadora",
+        "precio": 350,
+        "url": " "
+      },
+      {
+        "id": "3",
+        "nombre": "Globo Terraqueo",
+        "precio": 500,
+        "url": " "
+      },
+      {
+        "id": "4",
+        "nombre": "Regla",
+        "precio": 100,
+        "url": " "
+      }
+]
