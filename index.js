@@ -45,11 +45,13 @@ class Container{
     }
     async modifyProd(id){
         let array = await this.getAll();
-        return array.map(p => p.id === id ? { ...p, nombre: "Lapiz de color", precio: 11, url: " " } : p)
+        let modifyProd = array.map(p => p.id === id ? { ...p, nombre: "Lapiz de color", precio: 11, url: " " } : p);
+        fs.appendFileSync.splice(`${this.url}`, `${modifyProd}`);
+        return 
     }
     async deleteById(id){
-        let array = await this.getAll();
-        return array.splice(id);
+        let deleteId = await this.getAll();
+        return deleteId.splice(2,`${id}`);
     }
 }
 
