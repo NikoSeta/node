@@ -34,10 +34,14 @@ class Container{
             return arrayProductos.find(producto => producto.id === id); 
     }
     addProd(){
-        let newProd = {nombre: "cartuchera", precio: 275, url:" "}
-        let array = this.getAll()
-        let addNewProd = array.push(newProd)
-        return addNewProd
+        try{
+            let newProd = {nombre: "cartuchera", precio: 275, url:" "}
+            let string = JSON.stringify(newProd);
+            fs.appendFileSync.push(`${this.url}`, `${string}`);
+            return console.log(newProd.id);
+        }catch (error){
+            throw new Error(error);
+        }
     }
     async modifyProd(id){
         let array = await this.getAll();
@@ -51,7 +55,7 @@ class Container{
 
 let container = new Container('./productos.txt')
 
-
+console.log(container.addProd());
 
 // en la ruta '/api/productos' trae todos los productos en formato json
 router.get('/', (req, res) =>{
