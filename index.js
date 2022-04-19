@@ -18,7 +18,6 @@ const server = app.listen(`${PORT}`, ()=>{
     console.log(`Abre el link  para ver los productos usar este link http://localhost:${PORT}/productos `);
 });
 
-
 class Container{
     constructor(url){
         this.url = url
@@ -58,13 +57,9 @@ class Container{
 
 let container = new Container('./productos.txt')
 
-
 app.get('/productos', function(req, res){
     let productos = [container.getAll()]
     res.render('index',{
         productos: productos
     })
 });
-
-
-
