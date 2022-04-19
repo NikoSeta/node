@@ -1,27 +1,5 @@
 [
-        {
-        "id": "1",
-        "nombre": "Escuadra",
-        "precio": 150,
-        "url": " "
-        
-      },
-      {
-        "id": "2",
-        "nombre": "Calculadora",
-        "precio": 350,
-        "url": " "
-      },
-      {
-        "id": "3",
-        "nombre": "Globo Terraqueo",
-        "precio": 500,
-        "url": " "
-      },
-      {
-        "id": "4",
-        "nombre": "Regla",
-        "precio": 100,
-        "url": " "
-      }
+  {"id": 1, "name": "Metro", "price": 40, "url": "https://cdn2.iconfinder.com/data/icons/tools-flat-v-1-free/129/measure-1024.png"},
+  {"id": 2, "name": "Atornillador", "price": 100, "url": "https://cdn2.iconfinder.com/data/icons/tools-flat-v-1-free/129/drill-1024.png"},
+  {"id": 3, "name": "Pinza", "price": 10, "url": "https://cdn2.iconfinder.com/data/icons/tools-flat-v-1-free/129/pliers_tools_-1024.png"}
 ]
