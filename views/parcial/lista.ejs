@@ -12,10 +12,10 @@
             <tr><th>Producto</th><th>Precio</th><th>Imágen</th><th></th></tr>
             <%for(productos of productos){ %>
              <tr>
-                 <td>- <%=productos.nombre %>  </td>
+                 <td>- <%=productos.name %>  </td>
                  <td>$<%=productos.precio  %>  </td>
                  <td><img style="width: 30px; height: 30px;" src= <%=productos.url  %> ></td>
-                 <td><button class="btn-warning" id="delete"> X </button></td>
+                 <td><button type="button" class="btn btn-warning">X</button></td>
              </tr>
             <% } %> 
         </table>
