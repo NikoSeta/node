@@ -22,6 +22,8 @@ const server = app.listen(`${PORT}`, ()=>{
 class Container{
     constructor(url){
         this.url = url
+        this.contador= 0;
+        this.array = []
     }
     getAll(){
         try {
@@ -34,14 +36,16 @@ class Container{
             let arrayProductos =  this.getAll();
             return arrayProductos.find(producto => producto.id === id); 
     }
-    addProd(){
-        try{
-            let newProd = []
-            let string = JSON.stringify(newProd);
-            fs.appendFileSync(`${this.url}`, `${string}`);
-            return console.log(newProd.id);
-        }catch (error){
-            throw new Error(error);
+    addProd(obj){
+        try {
+            this.array = this.getAll()
+            this.contador ++;
+            obj.id = this.contador
+            this.array.push(obj)
+            fs.writeFileSync(this.url, JSON.stringify(this.array))
+        }
+        catch (err) {
+            console.log("No se pudo guardar el archivo")
         }
     }
     async modifyProd(id){
